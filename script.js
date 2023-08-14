@@ -10,11 +10,11 @@ let masterSongName = document.getElementById("masterSongName");
 let songItem = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-    {songName: "Space Song - Beach House", filePath: "songs/1.mp3", coverPath:"covers/1.jpg"},
-    {songName: "Levitating - Dua Lipa", filePath: "songs/2.mp3", coverPath:"covers/2.jpeg"},
-    {songName: "Scared to Live - The Weekend", filePath: "songs/3.mp3", coverPath:"covers/3.jpeg"},
-    {songName: "Gul - Anuv Jain", filePath: "songs/4.mp3", coverPath:"covers/4.jpg"},
-    {songName: "Dil Ibaadat - KK", filePath: "songs/5.mp3", coverPath:"covers/5.jpeg"}
+    {songName: "Space Song - Beach House", filePath: "1.mp3", coverPath:"1.jpg"},
+    {songName: "Levitating - Dua Lipa", filePath: "2.mp3", coverPath:"2.jpeg"},
+    {songName: "Scared to Live - The Weekend", filePath: "3.mp3", coverPath:"3.jpeg"},
+    {songName: "Gul - Anuv Jain", filePath: "4.mp3", coverPath:"4.jpg"},
+    {songName: "Dil Ibaadat - KK", filePath: "5.mp3", coverPath:"5.jpeg"}
 ]
 
 songItem.forEach((element, i) => {
@@ -65,7 +65,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
         songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-        audioElement.src = `songs/${songIndex+1}.mp3`;
+        audioElement.src = `${songIndex+1}.mp3`;
         audioElement.currentTime = 0;
         masterSongName.innerHTML = songs[songIndex].songName;
         audioElement.play();
@@ -82,9 +82,9 @@ document.getElementById('next').addEventListener('click', ()=>{
     else{
         songIndex += 1;
     }
-    audioElement.src = `songs/${songIndex+1}.mp3`;
+    audioElement.src = `${songIndex+1}.mp3`;
         audioElement.currentTime = 0;
-        masterSongName.innerHTML = songs[songIndex].songName;
+        masterSongName.innerHTML = [songIndex].songName;
         audioElement.play();
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
@@ -97,8 +97,8 @@ document.getElementById('previous').addEventListener('click', ()=>{
     else{
         songIndex -= 1;
     }
-    audioElement.src = `songs/${songIndex+1}.mp3`;
-    masterSongName.innerHTML = songs[songIndex].songName;
+    audioElement.src = `${songIndex+1}.mp3`;
+    masterSongName.innerHTML = [songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
     masterPlay.classList.remove('fa-play-circle');
