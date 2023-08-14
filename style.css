@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@200&display=swap');
+body{
+    background-color: rgb(55, 50, 44);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    background-color: black;
+    height: 100px;
+    color: green;
+}
+
+nav ul :hover{
+    color: chocolate;
+    cursor: pointer;
+}
+
+.brand img{
+    width: 80px;
+    height: 80px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 2.0rem;
+
+}
+
+nav ul li{
+    padding: 0px 10px;
+    
+}
+
+.container{
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    font-family: 'REM', sans-serif;
+    /* display: flex; */
+    margin: 20px auto;
+    border-radius: 12px;
+    padding: 20px;
+    width: 70%;
+    background-image: url('bg.jpg');
+}
+
+.bottom{
+    position: sticky;
+    height: 120px;
+    bottom: 0;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+
+#myProcessBar{
+    width: 75vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.icons{
+    margin-top: 20px;
+}
+
+.icons i{
+    margin: 4px;
+    cursor: pointer;
+}
+
+.songItemContainer{
+    margin: 40px 0px;
+}
+.songItem{
+    height: 80px;
+    display: flex;
+    background-color: red;
+    width: 50%;
+    margin: 15px 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 18px;
+}
+
+.songItem img{
+    width: 83px;
+    margin: 0px 3px;
+    border-radius: 18px;
+}
+
+.timestamp{
+    margin: 0px 30px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+.songinfo {
+    position: absolute;
+    left: 10vw;
+    top: 40px;
+    font-family: 'REM', sans-serif;
+}
+
+.songinfo span{
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    width: 250px;
+    font-size: 18px;        
+}
+
+.songinfo img{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+@media only screen and(max-width: 1100px) {
+    body{
+        background-color: red;
+    }
+}
